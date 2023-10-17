@@ -7,5 +7,5 @@ class AppColors {
   static const Color redAccent = Color(0xFFFFD7DD);
   static const Color backgroundColor = Color(0xFFF2F5F9);
   static const Color white = Color(0xFFFFFFFF);
-  static const Color profile = Color(0xFFE0E0E0);
+  static const Color textGrey = Color(0xFF818BA0);
 }
