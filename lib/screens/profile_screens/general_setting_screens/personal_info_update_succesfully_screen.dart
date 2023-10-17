@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pressuremed/constants/app_colors.dart';
 import 'package:pressuremed/constants/app_fonts.dart';
+import 'package:pressuremed/hooks/button_container.dart';
 
 class PersonalInfoUpdatedSucessfullyScreen extends StatefulWidget {
   const PersonalInfoUpdatedSucessfullyScreen({super.key});
@@ -23,14 +24,20 @@ class _PersonalInfoUpdatedSucessfullyScreenState extends State<PersonalInfoUpdat
             const Image(image: AssetImage("assets/images/Item.png"),
             height: 330,
             width: double.infinity,),
+            const SizedBox(height: 20,),
             Text("Account succesfully\nupdated! 🌈",
             textAlign: TextAlign.center,
             style: primaryFont.copyWith(
               fontSize: 30,fontWeight: FontWeight.w800,color: AppColors.text,)),
+            const SizedBox(height: 20,),  
             Text("Thanks for updating your account!",
             textAlign: TextAlign.center,
             style: primaryFont.copyWith(
               fontSize: 16,fontWeight: FontWeight.w500,color: AppColors.textGrey,)),
+            const SizedBox(height: 30,),  
+            NextContainer(
+                    text: "Back to Settings",
+                    image: "assets/icons/setting.png"),
           ],
         ),
       ),

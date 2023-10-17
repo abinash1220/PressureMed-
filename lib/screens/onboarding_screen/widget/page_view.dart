@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pressuremed/constants/app_colors.dart';
 import 'package:pressuremed/constants/app_fonts.dart';
+import 'package:pressuremed/hooks/button_container.dart';
 import 'package:pressuremed/hooks/next_container.dart';
 
 class PageViewExample extends StatefulWidget {
@@ -94,11 +95,13 @@ class _PageViewExampleState extends State<PageViewExample> {
                   ),
                 ],
               ),
-              const Padding(
-                padding: EdgeInsets.only(bottom: 50),
+               Padding(
+                padding:const EdgeInsets.only(bottom: 50),
                 child: Column(
                   children: [
-                    NextContainer(),
+                    NextContainer(
+                    text: "Continue",
+                    image: "assets/icons/arrowForword.png"),
                   ],
                 ),
               ),

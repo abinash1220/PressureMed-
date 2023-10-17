@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:pressuremed/screens/profile_screens/general_setting_screens/personal_info_update_succesfully_screen.dart';
+import 'package:pressuremed/screens/profile_screens/general_setting_screens/notification_screen.dart';
+import 'package:pressuremed/screens/profile_screens/help_&_support_screens/about_us_screen.dart';
+import 'package:pressuremed/screens/profile_screens/help_&_support_screens/contact_us_screen.dart';
 import 'package:pressuremed/screens/splash_screens/splash_screen.dart';
 
 void main() {
@@ -15,7 +17,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home: PersonalInfoUpdatedSucessfullyScreen(),
+      home: NotificationScreen(),
     );
   }
 }
