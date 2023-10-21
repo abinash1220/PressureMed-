@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:pressuremed/constants/app_colors.dart';
 import 'package:pressuremed/constants/app_fonts.dart';
+import 'package:pressuremed/screens/bottom_navbar/bottom_navbar_screen.dart';
 import 'package:pressuremed/screens/dash_board_screen/dash_board_screen.dart';
 import 'package:pressuremed/screens/onboarding_screen/onboarding_screen.dart';
 
@@ -22,7 +23,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Timer.periodic(const Duration(seconds: 3), (timer) {
       Navigator.pushAndRemoveUntil(
             context,
-            MaterialPageRoute(builder: ((context) => const OnboardingScreen())),
+            MaterialPageRoute(builder: ((context) => BottomBar())),
             (route) => false);
        timer.cancel();     
      });
