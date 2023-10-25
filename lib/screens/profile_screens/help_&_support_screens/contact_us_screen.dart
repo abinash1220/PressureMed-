@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:pressuremed/constants/app_colors.dart';
 import 'package:pressuremed/constants/app_fonts.dart';
 import 'package:pressuremed/screens/profile_screens/help_&_support_screens/widget/contact_container.dart';
@@ -18,7 +19,11 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
       appBar: AppBar(
         elevation: 0,
         backgroundColor: AppColors.backgroundColor,
-        leading:const Image(image: AssetImage("assets/icons/backarrow.png")),
+        leading:InkWell(
+          onTap: (){
+            Get.back();
+          },
+          child: const Image(image: AssetImage("assets/icons/backarrow.png"))),
         title: Text("Contact Information",
                style: primaryFont.copyWith(
                fontSize: 20,fontWeight: FontWeight.w800,color: AppColors.text,)),

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:pressuremed/constants/app_colors.dart';
 import 'package:pressuremed/constants/app_fonts.dart';
+import 'package:pressuremed/screens/onboarding_screen/patient_info_screen.dart';
 import 'package:pressuremed/screens/profile_screens/help_&_support_screens/widget/about_container.dart';
 import 'package:pressuremed/screens/profile_screens/widget/profile_container.dart';
 
@@ -57,25 +59,30 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     ),
                   ),
                   const SizedBox(width: 10,),
-                  Container(
-                    height: 40,
-                    width: 60,
-                    decoration: BoxDecoration(
-                      color: AppColors.white,
-                      borderRadius: BorderRadius.circular(10)
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        const Image(image: AssetImage("assets/icons/user.png")),
-                         Padding(
-                           padding: const EdgeInsets.only(bottom: 8),
-                           child: Text(" +",
-                             style: primaryFont.copyWith(
-                             fontSize: 24,fontWeight: FontWeight.w800,color: AppColors.text,)),
-                         ),
-                      ],
+                  InkWell(
+                    onTap: (){
+                      Get.to(const PatientInfoScreen());
+                    },
+                    child: Container(
+                      height: 40,
+                      width: 60,
+                      decoration: BoxDecoration(
+                        color: AppColors.white,
+                        borderRadius: BorderRadius.circular(10)
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          const Image(image: AssetImage("assets/icons/user.png")),
+                           Padding(
+                             padding: const EdgeInsets.only(bottom: 8),
+                             child: Text(" +",
+                               style: primaryFont.copyWith(
+                               fontSize: 24,fontWeight: FontWeight.w800,color: AppColors.text,)),
+                           ),
+                        ],
+                      ),
                     ),
                   ),
               ],

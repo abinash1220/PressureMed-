@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pressuremed/constants/app_colors.dart';
 import 'package:pressuremed/constants/app_fonts.dart';
+import 'package:pressuremed/screens/profile_screens/general_setting_screens/notification_screen.dart';
+import 'package:pressuremed/screens/profile_screens/general_setting_screens/personal_info_edit_screen.dart';
+import 'package:pressuremed/screens/profile_screens/help_&_support_screens/about_us_screen.dart';
+import 'package:pressuremed/screens/profile_screens/help_&_support_screens/contact_us_screen.dart';
 import 'package:pressuremed/screens/profile_screens/widget/setting_container.dart';
 
 class SettingScreen extends StatefulWidget {
@@ -67,16 +71,26 @@ class _SettingScreenState extends State<SettingScreen> {
                style: primaryFont.copyWith(
                fontSize: 20,fontWeight: FontWeight.w800,color: AppColors.text,)),
                const SizedBox(height: 10,),
-               SettingContainer(
-                text: "Personal Info", 
-                image: "assets/icons/forwordios.png", 
-                icon: "assets/icons/Monotoneuser.png", 
-                color: AppColors.white),
-              SettingContainer(
-                text: "Notification", 
-                image: "assets/icons/forwordios.png", 
-                icon: "assets/icons/bell.png", 
-                color: AppColors.white),
+               InkWell(
+                onTap: (){
+                   Get.to(const PersonalInfoEditScreen());
+                },
+                 child: SettingContainer(
+                  text: "Personal Info", 
+                  image: "assets/icons/forwordios.png", 
+                  icon: "assets/icons/Monotoneuser.png", 
+                  color: AppColors.white),
+               ),
+               InkWell(
+                onTap: (){
+                  Get.to(const NotificationScreen());
+                },
+                child: SettingContainer(
+                  text: "Notification", 
+                  image: "assets/icons/forwordios.png", 
+                  icon: "assets/icons/bell.png", 
+                  color: AppColors.white),
+              ),
               SettingContainer(
                 text: "Preferences", 
                 image: "assets/icons/forwordios.png", 
@@ -85,7 +99,7 @@ class _SettingScreenState extends State<SettingScreen> {
               SettingContainer(
                 text: "Security", 
                 image: "assets/icons/forwordios.png", 
-                icon: "assets/icons/Monotoneuser.png", 
+                icon: "assets/icons/lock.png", 
                 color: AppColors.white),
               const SizedBox(height: 20,),
               Text("Accessibility",
@@ -107,21 +121,31 @@ class _SettingScreenState extends State<SettingScreen> {
                style: primaryFont.copyWith(
                fontSize: 20,fontWeight: FontWeight.w800,color: AppColors.text,)),
                const SizedBox(height: 10,),
-              SettingContainer(
-                text: "About", 
-                image: "assets/icons/forwordios.png", 
-                icon: "assets/icons/question.png", 
-                color: AppColors.white),
+              InkWell(
+                onTap: (){
+                  Get.to(const AboutUsScreen());
+                },
+                child: SettingContainer(
+                  text: "About", 
+                  image: "assets/icons/forwordios.png", 
+                  icon: "assets/icons/question.png", 
+                  color: AppColors.white),
+              ),
               SettingContainer(
                 text: "Help Center", 
                 image: "assets/icons/forwordios.png", 
                 icon: "assets/icons/chat.png", 
                 color: AppColors.white),
-              SettingContainer(
-                text: "Contact Us", 
-                image: "assets/icons/forwordios.png", 
-                icon: "assets/icons/telephone.png", 
-                color: AppColors.white),
+              InkWell(
+                onTap: (){
+                  Get.to(const ContactUsScreen());
+                },
+                child: SettingContainer(
+                  text: "Contact Us", 
+                  image: "assets/icons/forwordios.png", 
+                  icon: "assets/icons/telephone.png", 
+                  color: AppColors.white),
+              ),
                 const SizedBox(height: 20,),
               Text("Sign Out",
                style: primaryFont.copyWith(
