@@ -2,11 +2,8 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:pressuremed/constants/app_colors.dart';
 import 'package:pressuremed/screens/bluetooth_screen/bluetooth_screen.dart';
-import 'package:pressuremed/screens/profile_screens/general_setting_screens/notification_screen.dart';
-import 'package:pressuremed/screens/profile_screens/general_setting_screens/personal_info_update_succesfully_screen.dart';
-import 'package:pressuremed/screens/profile_screens/help_&_support_screens/about_us_screen.dart';
+import 'package:pressuremed/screens/dash_board_screen/dash_board_screen.dart';
 import 'package:pressuremed/screens/profile_screens/profile_screen.dart';
-import 'package:pressuremed/screens/schedule_screen/schedule_screen.dart';
 
 class BottomBar extends StatefulWidget {
   int index;
@@ -34,7 +31,7 @@ class _BottomBarState extends State<BottomBar> {
 
   final screens = [
     const BluetoothScreen(),
-    const ScheduleScreen(),
+    const DashBoardScreen(),
     const ProfileScreen(),
   ];
 
