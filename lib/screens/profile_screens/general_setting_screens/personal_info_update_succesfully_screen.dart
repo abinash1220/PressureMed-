@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:pressuremed/constants/app_colors.dart';
 import 'package:pressuremed/constants/app_fonts.dart';
 import 'package:pressuremed/hooks/button_container.dart';
+import 'package:pressuremed/screens/profile_screens/settings_screen.dart';
 
 class PersonalInfoUpdatedSucessfullyScreen extends StatefulWidget {
   const PersonalInfoUpdatedSucessfullyScreen({super.key});
@@ -35,9 +37,14 @@ class _PersonalInfoUpdatedSucessfullyScreenState extends State<PersonalInfoUpdat
             style: primaryFont.copyWith(
               fontSize: 16,fontWeight: FontWeight.w500,color: AppColors.textGrey,)),
             const SizedBox(height: 30,),  
-            NextContainer(
-                    text: "Back to Settings",
-                    image: "assets/icons/setting.png"),
+            InkWell(
+              onTap: (){
+                Get.off(const SettingScreen());
+              },
+              child: NextContainer(
+                      text: "Back to Settings",
+                      image: "assets/icons/setting.png"),
+            ),
           ],
         ),
       ),

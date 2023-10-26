@@ -6,6 +6,7 @@ import 'package:pressuremed/screens/profile_screens/general_setting_screens/noti
 import 'package:pressuremed/screens/profile_screens/general_setting_screens/personal_info_update_succesfully_screen.dart';
 import 'package:pressuremed/screens/profile_screens/help_&_support_screens/about_us_screen.dart';
 import 'package:pressuremed/screens/profile_screens/profile_screen.dart';
+import 'package:pressuremed/screens/schedule_screen/schedule_screen.dart';
 
 class BottomBar extends StatefulWidget {
   int index;
@@ -33,7 +34,7 @@ class _BottomBarState extends State<BottomBar> {
 
   final screens = [
     const BluetoothScreen(),
-    const NotificationScreen(),
+    const ScheduleScreen(),
     const ProfileScreen(),
   ];
 

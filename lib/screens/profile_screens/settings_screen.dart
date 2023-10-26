@@ -6,6 +6,7 @@ import 'package:pressuremed/screens/profile_screens/general_setting_screens/noti
 import 'package:pressuremed/screens/profile_screens/general_setting_screens/personal_info_edit_screen.dart';
 import 'package:pressuremed/screens/profile_screens/help_&_support_screens/about_us_screen.dart';
 import 'package:pressuremed/screens/profile_screens/help_&_support_screens/contact_us_screen.dart';
+import 'package:pressuremed/screens/profile_screens/help_&_support_screens/faq_screen.dart';
 import 'package:pressuremed/screens/profile_screens/widget/setting_container.dart';
 
 class SettingScreen extends StatefulWidget {
@@ -131,11 +132,16 @@ class _SettingScreenState extends State<SettingScreen> {
                   icon: "assets/icons/question.png", 
                   color: AppColors.white),
               ),
-              SettingContainer(
-                text: "Help Center", 
-                image: "assets/icons/forwordios.png", 
-                icon: "assets/icons/chat.png", 
-                color: AppColors.white),
+              InkWell(
+                onTap: (){
+                 // Get.to(const FAQScreen());
+                },
+                child: SettingContainer(
+                  text: "Help Center", 
+                  image: "assets/icons/forwordios.png", 
+                  icon: "assets/icons/chat.png", 
+                  color: AppColors.white),
+              ),
               InkWell(
                 onTap: (){
                   Get.to(const ContactUsScreen());
