@@ -17,16 +17,21 @@ class _BluetoothScreenState extends State<BluetoothScreen> {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Container(
-            height: 325,
-            width: double.infinity,
-            decoration:const BoxDecoration(
-              color: AppColors.blue,
-              borderRadius: BorderRadius.only(
-                bottomLeft: Radius.circular(32),
-                bottomRight: Radius.circular(32)),
-                image: DecorationImage(image: AssetImage("assets/icons/backImg.png"))
-            ),
+          Stack(
+            children: [
+              Container(
+                height: 325,
+                width: double.infinity,
+                decoration:const BoxDecoration(
+                  color: AppColors.blue,
+                  borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(32),
+                    bottomRight: Radius.circular(32)),
+                    image: DecorationImage(image: AssetImage("assets/icons/backImg.png"))
+                ),
+              ),
+              Image(image: AssetImage("assets/icons/bluetooth.png"))
+            ],
           ),
           Padding(
             padding: const EdgeInsets.only(left: 20,top: 25),

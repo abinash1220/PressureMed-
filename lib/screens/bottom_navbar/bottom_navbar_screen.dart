@@ -38,9 +38,9 @@ class _BottomBarState extends State<BottomBar> {
   @override
   Widget build(BuildContext context) {
     final icons = <Widget> [
-      const Icon(Icons.add, size: 30,color:AppColors.grey,),
-      const Icon(Icons.list, size: 30,color:AppColors.grey),
-      const Icon(Icons.compare_arrows, size: 30,color:AppColors.grey),
+      Icon(Icons.add, size: 30,color:_selectedItemPosition == 0 ?AppColors.white : AppColors.grey,),
+      Icon(Icons.list, size: 30,color:_selectedItemPosition == 1 ?AppColors.white : AppColors.grey,),
+      Icon(Icons.compare_arrows, size: 30,color:_selectedItemPosition == 2 ?AppColors.white : AppColors.grey,),
     ];
     return Scaffold(
       body: screens[_selectedItemPosition],
