@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:pressuremed/screens/profile_screens/general_setting_screens/notification_screen.dart';
-import 'package:pressuremed/screens/profile_screens/help_&_support_screens/about_us_screen.dart';
-import 'package:pressuremed/screens/profile_screens/help_&_support_screens/contact_us_screen.dart';
+import 'package:pressuremed/controllers/history_controller.dart';
 import 'package:pressuremed/screens/splash_screens/splash_screen.dart';
 
 void main() {
+  Get.put(HistoryController());
   runApp(const MyApp());
 }
 

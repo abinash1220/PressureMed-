@@ -29,6 +29,8 @@ class _SplashScreenState extends State<SplashScreen> {
      });
   }
 
+ 
+
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
@@ -42,6 +44,7 @@ class _SplashScreenState extends State<SplashScreen> {
             Text("PressureMed",
             style: primaryFont.copyWith(
               fontSize: 20,fontWeight: FontWeight.w800,color: AppColors.text,)),
+              
         ],
       ),
     );

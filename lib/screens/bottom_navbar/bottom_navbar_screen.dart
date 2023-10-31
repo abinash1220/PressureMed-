@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:pressuremed/constants/app_colors.dart';
 import 'package:pressuremed/screens/bluetooth_screen/bluetooth_screen.dart';
 import 'package:pressuremed/screens/dash_board_screen/dash_board_screen.dart';
+import 'package:pressuremed/screens/history_screen/history_screen.dart';
 import 'package:pressuremed/screens/profile_screens/profile_screen.dart';
 
 class BottomBar extends StatefulWidget {
@@ -30,7 +31,7 @@ class _BottomBarState extends State<BottomBar> {
   }
 
   final screens = [
-    const BluetoothScreen(),
+    const HistoryScreen(),
     const DashBoardScreen(),
     const ProfileScreen(),
   ];
