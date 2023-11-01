@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:pressuremed/constants/app_colors.dart';
 import 'package:pressuremed/constants/app_fonts.dart';
 import 'package:pressuremed/controllers/history_controller.dart';
+import 'package:pressuremed/screens/history_screen/widget/history_graph.dart';
 
 class HistoryScreen extends StatefulWidget {
   const HistoryScreen({super.key});
@@ -31,12 +32,12 @@ class _HistoryScreenState extends State<HistoryScreen> {
                style: primaryFont.copyWith(
                fontSize: 20,fontWeight: FontWeight.w800,color: AppColors.text,)),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(20.0),
-        child: Column(
-          children: [
-            Obx( () =>
-              Stack(
+      body: Column(
+        children: [
+          Obx( () =>
+            Padding(
+              padding: const EdgeInsets.only(left: 20,right: 20),
+              child: Stack(
                 children: [
                   Padding(
                     padding: const EdgeInsets.all(4.0),
@@ -49,7 +50,7 @@ class _HistoryScreenState extends State<HistoryScreen> {
                       ),
                     ),
                   ),
-            
+                      
                   Container(
                     height: 48,
                     width: double.infinity,
@@ -81,8 +82,8 @@ class _HistoryScreenState extends State<HistoryScreen> {
                              onTap: (){
                                  historyController.tapIndex(0);
                               },
-                            child: Padding(
-                              padding: const EdgeInsets.only(left: 20),
+                            child: Container(
+                              alignment: Alignment.center,
                               child: Text("Systolic",
                                      style: primaryFont.copyWith(
                                      fontSize: 14,fontWeight: FontWeight.w700,
@@ -115,10 +116,13 @@ class _HistoryScreenState extends State<HistoryScreen> {
                            onTap: (){
                                historyController.tapIndex(1);
                             },
-                         child: Text("Diastolic",
-                             style: primaryFont.copyWith(
-                             fontSize: 14,fontWeight: FontWeight.w700,
-                             color:AppColors.text,)),
+                         child: Container(
+                          alignment: Alignment.center,
+                           child: Text("Diastolic",
+                               style: primaryFont.copyWith(
+                               fontSize: 14,fontWeight: FontWeight.w700,
+                               color:AppColors.text,)),
+                         ),
                        ),
                      ),
                      historyController.tapIndex.value == 2 ?
@@ -146,8 +150,8 @@ class _HistoryScreenState extends State<HistoryScreen> {
                          onTap: (){
                                  historyController.tapIndex(2);
                               },
-                         child: Padding(
-                           padding: const EdgeInsets.only(right: 20),
+                         child: Container(
+                           alignment: Alignment.center,
                            child: Text("Heartrate",
                                style: primaryFont.copyWith(
                                fontSize: 14,fontWeight: FontWeight.w700,
@@ -161,8 +165,10 @@ class _HistoryScreenState extends State<HistoryScreen> {
                 ],
               ),
             ),
-          ],
-        ),
+          ),
+          const HistoryGraph(),
+          
+        ],
       ),
     );
   }
