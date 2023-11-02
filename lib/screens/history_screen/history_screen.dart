@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:pressuremed/constants/app_colors.dart';
 import 'package:pressuremed/constants/app_fonts.dart';
 import 'package:pressuremed/controllers/history_controller.dart';
+import 'package:pressuremed/screens/history_screen/widget/clalendar.dart';
 import 'package:pressuremed/screens/history_screen/widget/history_graph.dart';
 
 class HistoryScreen extends StatefulWidget {
@@ -167,7 +168,46 @@ class _HistoryScreenState extends State<HistoryScreen> {
             ),
           ),
           const HistoryGraph(),
-          
+          const SizedBox(height: 20,),
+          Expanded(
+            child: Container(
+              decoration:const BoxDecoration(
+                color: AppColors.white,
+                borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(24),topRight: Radius.circular(24)),
+                boxShadow: [
+                  BoxShadow(
+                    blurRadius: 6.5,
+                    color: AppColors.lightGrey
+                  ),
+                ]
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Column(
+                  children: [
+                       Padding(
+                         padding: const EdgeInsets.only(left: 10,right: 10),
+                         child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                             Container(
+                              width: 10,
+                             ),
+                             Text("Health Reports",
+                                   style: primaryFont.copyWith(
+                                   fontSize: 20,fontWeight: FontWeight.w800,
+                                   color:AppColors.text,)),
+                             const Image(image: AssetImage("assets/icons/calendar.png"))      
+                          ],
+                         ),
+                       ),
+                       Datepickerwidget(),
+                  ],
+                ),
+              ),
+            ),
+          )
         ],
       ),
     );

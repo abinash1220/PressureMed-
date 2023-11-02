@@ -5,6 +5,7 @@ import 'package:pressuremed/screens/bluetooth_screen/bluetooth_screen.dart';
 import 'package:pressuremed/screens/dash_board_screen/dash_board_screen.dart';
 import 'package:pressuremed/screens/history_screen/history_screen.dart';
 import 'package:pressuremed/screens/profile_screens/profile_screen.dart';
+import 'package:pressuremed/screens/report_screen/report_screen.dart';
 
 class BottomBar extends StatefulWidget {
   int index;
@@ -31,7 +32,7 @@ class _BottomBarState extends State<BottomBar> {
   }
 
   final screens = [
-    const HistoryScreen(),
+    const ReportScreen(),
     const DashBoardScreen(),
     const ProfileScreen(),
   ];

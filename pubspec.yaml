@@ -43,6 +43,7 @@ dependencies:
   get: ^4.6.6
   swipeable_button_view: ^0.0.2
   graphic: ^2.2.1
+  calender_picker: ^2.0.1
 
 dev_dependencies:
   flutter_test:
