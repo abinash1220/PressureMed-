@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 import 'package:pressuremed/constants/app_colors.dart';
 import 'package:pressuremed/constants/app_fonts.dart';
 
@@ -30,7 +31,13 @@ class _BluetoothScreenState extends State<BluetoothScreen> {
                     image: DecorationImage(image: AssetImage("assets/icons/backImg.png"))
                 ),
               ),
-              Image(image: AssetImage("assets/icons/bluetooth.png"))
+               Positioned(
+                top: 0,
+                bottom: 0,
+                left: 0,
+                right: 0,
+                child: Lottie.asset('assets/images/bluetoothlottie.json'),
+              ),
             ],
           ),
           Padding(

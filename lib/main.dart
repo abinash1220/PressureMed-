@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pressuremed/controllers/history_controller.dart';
+import 'package:pressuremed/controllers/settings_controoler.dart';
 import 'package:pressuremed/screens/splash_screens/splash_screen.dart';
 
 void main() {
   Get.put(HistoryController());
+  Get.put(SettingsController());
   runApp(const MyApp());
 }
 

@@ -23,8 +23,8 @@ class _HistoryGraphState extends State<HistoryGraph> {
   @override
   Widget build(BuildContext context) {
     return Container(
-                margin: const EdgeInsets.only(top: 15,),
-                width: 350,
+                margin: const EdgeInsets.only(top: 15,left: 20,right: 20),
+                width: 300,
                 height: 320,
                 decoration: BoxDecoration(
                   color: AppColors.white,
@@ -38,6 +38,7 @@ class _HistoryGraphState extends State<HistoryGraph> {
                       padding: const EdgeInsets.only(left: 10,right: 10),
                       child: Container(
                         height: 230,
+                        width: 350,
                         child: Chart(
                           data: basicData,
                           variables: {

@@ -40,6 +40,7 @@ class DashBoardContainer extends StatelessWidget {
                   borderRadius: BorderRadius.circular(2)
                 ),
                ),
+               
                Text(type,
                  style: primaryFont.copyWith(
                  fontSize: 11,fontWeight: FontWeight.w500,color: AppColors.grey,)),   

@@ -4,6 +4,7 @@ import 'package:pressuremed/constants/app_colors.dart';
 import 'package:pressuremed/constants/app_fonts.dart';
 import 'package:pressuremed/controllers/history_controller.dart';
 import 'package:pressuremed/screens/history_screen/widget/clalendar.dart';
+import 'package:pressuremed/screens/history_screen/widget/history_container.dart';
 import 'package:pressuremed/screens/history_screen/widget/history_graph.dart';
 
 class HistoryScreen extends StatefulWidget {
@@ -24,16 +25,16 @@ class _HistoryScreenState extends State<HistoryScreen> {
       appBar: AppBar(
         elevation: 0,
         backgroundColor: AppColors.backgroundColor,
-        leading:InkWell(
-          onTap: (){
-            Get.back();
-          },
-          child: const Image(image: AssetImage("assets/icons/backarrow.png"))),
+        // leading:InkWell(
+        //   onTap: (){
+        //     Get.back();
+        //   },
+        //   child: const Image(image: AssetImage("assets/icons/backarrow.png"))),
         title: Text("History",
                style: primaryFont.copyWith(
                fontSize: 20,fontWeight: FontWeight.w800,color: AppColors.text,)),
       ),
-      body: Column(
+      body: ListView(
         children: [
           Obx( () =>
             Padding(
@@ -187,7 +188,7 @@ class _HistoryScreenState extends State<HistoryScreen> {
                 child: Column(
                   children: [
                        Padding(
-                         padding: const EdgeInsets.only(left: 10,right: 10),
+                         padding: const EdgeInsets.only(left: 10,right: 10,bottom: 10),
                          child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -203,6 +204,7 @@ class _HistoryScreenState extends State<HistoryScreen> {
                          ),
                        ),
                        Datepickerwidget(),
+                       HistoryContainer(),
                   ],
                 ),
               ),

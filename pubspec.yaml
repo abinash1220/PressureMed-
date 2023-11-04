@@ -44,11 +44,14 @@ dependencies:
   swipeable_button_view: ^0.0.2
   graphic: ^2.2.1
   calender_picker: ^2.0.1
+  square_percent_indicater: ^0.1.0
+  lottie: ^2.7.0
+  #date_picker_timeline: ^1.2.5
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
+  flutter_launcher_icons: ^0.13.1
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
   # activated in the `analysis_options.yaml` file located at the root of your
@@ -58,7 +61,10 @@ dev_dependencies:
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
-
+flutter_icons:
+  android: "ic_launcher"
+  ios: true
+  image_path: "assets/icons/Monotonehealthplus.png"
 # The following section is specific to Flutter packages.
 flutter:
 

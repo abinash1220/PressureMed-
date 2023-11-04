@@ -67,6 +67,8 @@ class _ScheduleContainerState extends State<ScheduleContainer> {
                 Row(
                   children: [
                         Switch(
+                            activeColor: AppColors.white,
+                            activeTrackColor: AppColors.blue,
                             value: light,
                             onChanged: (bool value) {
                                setState(() {

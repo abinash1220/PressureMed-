@@ -41,7 +41,14 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
                     Text("Hello, Phos",
                       style: primaryFont.copyWith(
                       fontSize: 30,fontWeight: FontWeight.w800,color: AppColors.text,)),
-                      const Image(image: AssetImage("assets/icons/Group.png")),
+                       Row(
+                        children: [
+                           Text("Hello, Phos",
+                            style: primaryFont.copyWith(
+                            fontSize: 30,fontWeight: FontWeight.w800,color: AppColors.text,)),
+                          const Image(image: AssetImage("assets/icons/Group.png")),
+                        ],
+                      ),
                   ],
                 ),
                 const SizedBox(height: 20,),
@@ -53,32 +60,31 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
                 DashBoardContainer(value: "85",data: "kpm",type: "heart rate",color: AppColors.red), 
 
                 SwipeableButtonView(
-    buttonText: 'Swipe to start reading',
-    buttonWidget: Container(
-        child:const Icon(Icons.arrow_forward_ios_rounded,
-            color: AppColors.blue,
-                ),),
-    activeColor: AppColors.blue,
-    isFinished: isFinished,
-    onWaitingProcess: () {
-    Future.delayed(const Duration(seconds: 2), () {
-            setState(() {
-                isFinished = true;
+                  buttonText: 'Swipe to start reading',
+                  buttonWidget:const  Icon(Icons.arrow_forward_ios_rounded,
+                     color: AppColors.white,
+                  ),
+                  activeColor: AppColors.white,
+                  isFinished: isFinished,
+                  onWaitingProcess: () {
+                  Future.delayed(const Duration(seconds: 2), () {
+                    setState(() {
+                        isFinished = true;
                       });
                     });
                   },
-    onFinish: () async {
-        // await Navigator.push(context,
-        //                 PageTransition(
-        //                     type: PageTransitionType.fade,
-        //                     child: DashboardScreen()));
+                  onFinish: () async {
+                  // await Navigator.push(context,
+                  //                 PageTransition(
+                  //                     type: PageTransitionType.fade,
+                 //                     child: DashboardScreen()));
 
                     //TODO: For reverse ripple effect animation
                     setState(() {
                       isFinished = false;
                     });
                   },
-)     
+               ),     
             ],
           ),
         ),

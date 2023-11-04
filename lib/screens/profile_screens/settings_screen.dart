@@ -134,10 +134,10 @@ class _SettingScreenState extends State<SettingScreen> {
               ),
               InkWell(
                 onTap: (){
-                 // Get.to(const FAQScreen());
+                  Get.to(const FAQScreen());
                 },
                 child: SettingContainer(
-                  text: "Help Center", 
+                  text: "FAQ Center", 
                   image: "assets/icons/forwordios.png", 
                   icon: "assets/icons/chat.png", 
                   color: AppColors.white),

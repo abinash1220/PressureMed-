@@ -3,7 +3,6 @@ import 'package:date_format/date_format.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:get/get.dart';
 import 'package:pressuremed/constants/app_colors.dart';
 
 class Datepickerwidget extends StatelessWidget {
