@@ -97,11 +97,11 @@ class _SettingScreenState extends State<SettingScreen> {
                 image: "assets/icons/forwordios.png", 
                 icon: "assets/icons/gear.png", 
                 color: AppColors.white),
-              SettingContainer(
-                text: "Security", 
-                image: "assets/icons/forwordios.png", 
-                icon: "assets/icons/lock.png", 
-                color: AppColors.white),
+              // SettingContainer(
+              //   text: "Security", 
+              //   image: "assets/icons/forwordios.png", 
+              //   icon: "assets/icons/lock.png", 
+              //   color: AppColors.white),
               const SizedBox(height: 20,),
               Text("Accessibility",
                style: primaryFont.copyWith(

@@ -61,6 +61,32 @@ class _FAQScreenState extends State<FAQScreen> {
           itemBuilder: (context, index) {
             return Column(
               children: [
+                Padding(
+                  padding: const EdgeInsets.only(top: 20,right: 20,left: 20),
+                  child: Container(
+                      height: 55,
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.white),
+                      alignment: Alignment.center,
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 15, right: 10),
+                        child: TextField(
+                          //controller: usernamecontroller,
+                          decoration: InputDecoration(
+                              isCollapsed: true,
+                              isDense: true,
+                              border: InputBorder.none,
+                              hintText: "Search",
+                              hintStyle: primaryFont.copyWith(
+                                color: AppColors.grey,
+                                fontWeight: FontWeight.w600,
+                              )),
+                        ),
+                      ),
+                    ),
+                ),
                 InkWell(
                   onTap: () {
                     if (selectedIndex != index) {

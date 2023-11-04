@@ -42,11 +42,13 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
                       style: primaryFont.copyWith(
                       fontSize: 30,fontWeight: FontWeight.w800,color: AppColors.text,)),
                        Row(
+                        crossAxisAlignment: CrossAxisAlignment.end,
                         children: [
-                           Text("Hello, Phos",
+                           Text("12%",
                             style: primaryFont.copyWith(
-                            fontSize: 30,fontWeight: FontWeight.w800,color: AppColors.text,)),
-                          const Image(image: AssetImage("assets/icons/Group.png")),
+                            fontSize: 12,fontWeight: FontWeight.w600,color: AppColors.text,)),
+                           const SizedBox(width: 5,),
+                           const Image(image: AssetImage("assets/icons/Group.png")),
                         ],
                       ),
                   ],

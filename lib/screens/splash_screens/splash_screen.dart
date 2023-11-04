@@ -29,7 +29,13 @@ class _SplashScreenState extends State<SplashScreen> {
      });
   }
 
- 
+  double _scale = 1.0;
+
+  void _animateImage() {
+    setState(() {
+      _scale = 5.0; // Change this value to control the final scale factor
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -37,6 +43,18 @@ class _SplashScreenState extends State<SplashScreen> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+              //  Center(
+              //    child: AnimatedContainer(
+              //                duration:const Duration(seconds: 3), // Animation duration
+              //                curve: Curves.easeInOut, // Animation curve
+              //                width: 200 * _scale, // Adjust the size as needed
+              //                height: 200 * _scale, // Adjust the size as needed
+              //                child: GestureDetector(
+              //     onTap: _animateImage,
+              //     child: Image.asset('assets/icons/Monotonehealthplus.png'), // Replace with your image path
+              //                ),
+              //              ),
+              //  ),
             const Center(
             child: Image(image: AssetImage("assets/icons/Monotonehealthplus.png"),
             height: 72,width: 72,fit: BoxFit.fill,)),

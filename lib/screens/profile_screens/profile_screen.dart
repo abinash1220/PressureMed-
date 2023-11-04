@@ -16,6 +16,7 @@ class ProfileScreen extends StatefulWidget {
 class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: AppColors.blue,
       body: SafeArea(
@@ -37,7 +38,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                // Container(height: 30,width: 200, color: AppColors.white,)
                 Container(
                     height: 40,
-                    width: 250,
+                    width: size.width * 0.7,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         color: Colors.white),
@@ -65,7 +66,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     },
                     child: Container(
                       height: 40,
-                      width: 60,
+                      width: size.width * 0.15,
                       decoration: BoxDecoration(
                         color: AppColors.white,
                         borderRadius: BorderRadius.circular(10)
